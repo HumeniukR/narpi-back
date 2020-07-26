@@ -1,0 +1,24 @@
+{
+  "name": "audio-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "audic": "^1.0.2",
+    "dotenv": "^8.2.0",
+    "ffmetadata": "^1.6.0",
+    "ffplay": "^1.1.0",
+    "jsmediatags": "^3.9.3",
+    "sound-play": "^1.0.5",
+    "vlc-static": "^1.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": ""
+}
