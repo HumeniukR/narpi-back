@@ -1,0 +1,22 @@
+{
+  "name": "vacuum-service-v3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index",
+    "start": "node index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ecovacs-deebot": "^0.4.17",
+    "node-machine-id": "^1.1.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
