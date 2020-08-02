@@ -1,6 +1,6 @@
 # narpi-back
 Smart home back-end services
-Here is the [front-end](https://github.com/joostth) part of smart home.
+Here is the [front-end](https://github.com/HumeniukR/narpi-fe) part of smart home.
 ### Instalation (vacuum-service)
 ```sh
 $ cd vacuum-service
