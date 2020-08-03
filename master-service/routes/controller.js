@@ -29,9 +29,7 @@ router.post('/light', async function(req, res) {
 
 router.post('/window', async (req, res) => {
     try {
-        console.log('window: ', req.body.percent)
         const controllerRes = await axios.post(URL + 'command', {
-
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -75,20 +73,6 @@ router.get('/alarm', async (req, res) => {
         console.error(e)
         res.send(500);
     }
-});
-
-// mock API for testing
-router.get('/test', async (req, res) => {
-    console.log('>> GET test API - req.body : ', req.body)
-    //res.status(200).json(req.body)
-    res.status(200).json({
-        armed: false, activated: false
-    })
-});
-
-router.post('/test', async (req, res) => {
-    console.log('>> POST test API - req.body : ', req.body)
-    res.status(200).json(req.body)
 });
 
 module.exports = router;

@@ -7,11 +7,6 @@ const jwt = require('jsonwebtoken')
 // TODO transfer refresh tokens into DB
 let refreshTokens = []
 
-router.get('/users', async (req, res) => {
-     const users = await User.find({})
-     res.send(users);
-});
-
 router.post('/token', (req, res) => {
     console.log('refreshTokens:', refreshTokens)
     const refreshToken = req.body.token
