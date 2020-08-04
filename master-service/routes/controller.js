@@ -20,6 +20,7 @@ router.post('/light', async function(req, res) {
                 ledNumber: req.body.command.ledNumber
             }
         })
+        systemState.rooms[req.body.command.ledNumber].enabled = req.body.command.enable
         res.status(200).json(controllerRes.data)
     } catch (e) {
         console.error(e)
@@ -39,7 +40,7 @@ router.post('/window', async (req, res) => {
                 percent: req.body.command.percent
             }
         })
-
+        systemState.windows[0].percent = req.body.command.percent
         res.status(200).json(controllerRes.data)
     } catch (e) {
         console.error(e)
@@ -56,6 +57,8 @@ router.post('/alarm', async (req, res) => {
                 name: req.body.armed ? 'enableAlarm' : 'disableAlarm',
             }
         })
+
+        systemState.alarm.armed = req.body.armed
         res.status(200).json(controllerRes.data)
     } catch (e) {
         console.error(e)
@@ -69,6 +72,7 @@ router.get('/alarm', async (req, res) => {
             API_KEY
         })
         res.status(200).json(controllerRes.data)
+        systemState.alarm = controllerRes.data
     } catch (e) {
         console.error(e)
         res.send(500);

@@ -12,6 +12,7 @@ router.post('/', async function(req, res) {
             VACUUM_API_KEY,
             command: req.body.command
         })
+        systemState.vacuum.lastCommand = req.body.command
         res.status(200).json(vacuumRes.data)
     } catch (e) {
         console.error(e)

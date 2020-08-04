@@ -12,6 +12,7 @@ router.post('/', async function(req, res) {
             PLAYER_API_KEY,
             trackId: req.body.trackId ? req.body.trackId : null
         })
+        systemState.player.pause = req.body.command === 'pause'
         res.status(200).json(playerRes.data)
     } catch (e) {
         console.error(e)

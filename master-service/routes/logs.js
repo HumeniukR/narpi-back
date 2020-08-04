@@ -1,11 +1,15 @@
 const express = require('express');
 const router = express.Router();
 const Log = require('../models/Log')
+require('../state/systemState')
 
 router.get('/', async (req, res) => {
     const logs = await Log.find({})
-    //res.redirect('/login');
     res.send(logs);
+});
+
+router.get('/state', async (req, res) => {
+    res.status(200).json(systemState)
 });
 
 router.post('/', async (req, res) => {
