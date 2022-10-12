@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "ecovacs-deebot": "^0.4.17",
+    "ecovacs-deebot": "^0.8.3",
     "node-machine-id": "^1.1.12"
   },
   "devDependencies": {
